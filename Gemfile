@@ -23,6 +23,20 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
+#to use twitter bootstrap
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
+# to construct the form
+gem 'simple_form', '~> 3.1.1'
+gem 'awesome_print', '~> 1.6.1'
+
+#authentication
+gem 'devise'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
