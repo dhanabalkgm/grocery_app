@@ -10,6 +10,15 @@
 #user
 User.create!(YAML::load(File.open("#{Rails.root}/db/seeds/user_seed.yml")))
 
+#brand
+Brand.create(name: "BB ROYAL")
+
+#volume
+Volume.create(number: 500, unit: "gram")
 
 #category
-c = Category.create(name: "Rice", parent: Category.create(name: "Food"))
+c = Category.create(name: "Channa Dal", parent: Category.create(name: "Dals & Pulses", parent: Category.create(name: "Grocery & Staples")))
+
+
+#product
+c.products.create(name: 'Channa Dal', price: 55, brand_id: 1, volume_id: 1, delivery_period: 12)

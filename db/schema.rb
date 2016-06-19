@@ -36,20 +36,14 @@ ActiveRecord::Schema.define(version: 20160618180436) do
     t.datetime "updated_at",            null: false
   end
 
-  create_table "product_details", force: :cascade do |t|
-    t.float    "price",                 limit: 24
-    t.float    "delivery_within_hours", limit: 24
-    t.integer  "product_id",            limit: 4
-    t.integer  "volume_id",             limit: 4
-    t.integer  "brand_id",              limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-  end
-
   create_table "products", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",            limit: 255
+    t.float    "price",           limit: 24
+    t.integer  "brand_id",        limit: 4
+    t.integer  "volume_id",       limit: 4
+    t.integer  "delivery_period", limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -9,4 +9,13 @@ class Category < ActiveRecord::Base
   has_many :category_products
   has_many :products, through: :category_products
 
+  #required for view dropdown
+  def parent_paths
+    path.pluck(:name).try(:join, " >> ")
+  end
+
+  def self.parent_paths
+    pluck(:name, :id)
+  end
+
 end

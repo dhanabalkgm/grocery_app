@@ -1,3 +1,5 @@
 class Brand < ActiveRecord::Base
-  has_many :product_details
+  has_many :products
+
+  validates :name, presence: true
 end

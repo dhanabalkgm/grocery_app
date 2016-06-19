@@ -1,3 +1,5 @@
 class Volume < ActiveRecord::Base
-  has_many :product_details
+  has_many :products
+
+  validates :number, :unit, presence: true
 end
