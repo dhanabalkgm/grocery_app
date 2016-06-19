@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#user
+User.create!(YAML::load(File.open("#{Rails.root}/db/seeds/user_seed.yml")))
+
+
+#category
+c = Category.create(name: "Rice", parent: Category.create(name: "Food"))

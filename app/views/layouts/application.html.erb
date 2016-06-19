@@ -52,6 +52,14 @@
             <li><%= link_to "Link2", "/path2"  %></li>
             <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+                <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span><%= link_to "Out", destroy_user_session_path %> </li>
+            <% else %>
+                <li><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span><%= link_to "In", new_user_session_path %> </li>
+                <li><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span><%= link_to "Up", new_user_registration_path %> </li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>

@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'font-awesome-rails', '4.4.0'
 
 # to construct the form
 gem 'simple_form', '~> 3.1.1'
@@ -35,6 +36,12 @@ gem 'awesome_print', '~> 1.6.1'
 
 #authentication
 gem 'devise'
+
+#for category slug
+gem 'friendly_id'
+
+#act as tree
+gem 'ancestry'
 
 
 # Use ActiveModel has_secure_password
