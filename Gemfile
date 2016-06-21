@@ -46,6 +46,9 @@ gem 'ancestry'
 #easy to interface
 gem 'rails_admin'
 
+#image uplaod
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

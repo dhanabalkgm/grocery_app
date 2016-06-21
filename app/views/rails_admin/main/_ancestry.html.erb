@@ -1,1 +1,1 @@
-<%= form.select :ancestry, Category.all.collect{|c| [c.parent_paths, c.id]}, {}, {class: "form-control"}%>
+<%= form.select :ancestry, Category.parent_paths, {}, {class: "form-control"}%>

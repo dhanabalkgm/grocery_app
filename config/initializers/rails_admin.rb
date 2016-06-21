@@ -63,7 +63,7 @@ RailsAdmin.config do |config|
       field :ancestry do
         label "Parents"
         formatted_value do
-          bindings[:object].ancestors.pluck(:name).try(:join," >> ")
+          bindings[:object].ancestry_path_names
         end
       end
     end
@@ -81,14 +81,27 @@ RailsAdmin.config do |config|
       field :ancestry do
         label "Parents"
         formatted_value do
-          bindings[:object].ancestors.pluck(:name).try(:join, " >> ")
+          bindings[:object].ancestry_path_names
         end
       end
     end
 
     edit do
-      include_fields :name, :description, :ancestry
+      include_fields :name, :description
+      field :ancestry do
+        label "Parents"
+        partial "ancestry"
+      end
     end
+  end
+
+  config.model 'Product' do
+    # create do
+    #   field :ancestry do
+    #     label "Parents"
+    #     partial "ancestry"
+    #   end
+    # end
   end
 
   config.actions do
