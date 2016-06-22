@@ -1,0 +1,12 @@
+<div class="col-md-3 product-grid">
+  <div class="product-items">
+    <div class="project-eff">
+      <div id="nivo-lightbox-demo"> <p> <%= image_tag product.image_url(:product_size), id: "nivo-lightbox-demo", data: { "lightbox-gallery": "gallery1" } %></p></div>
+      <!--img class="img-responsive" src="images/pro1.jpg" alt=""-->
+    </div>
+    <div class="produ-cost">
+      <h4><%= product.name %></h4>
+      <h5><%= product.price %> $</h5>
+    </div>
+  </div>
+</div>

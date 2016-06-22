@@ -1,0 +1,11 @@
+<% if category.children.exists? %>
+  <li id="menu-<%= category.id %>" ><a href="#"><span><%= category.name %></span><span class="fa fa-angle-right" style="float: right"></span></a>
+    <ul id="menu-<%= category.id %>-sub">
+      <% category.children.each do |children| %>
+          <%= render partial: "categories/category", locals: {category: children} %>
+      <% end %>
+    </ul>
+  </li>
+<% else %>
+  <li id="menu-arquivos" ><%= link_to category.name, category_products_path(category.id) %></li>
+<% end %>
